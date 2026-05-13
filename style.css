@@ -428,10 +428,46 @@ h2 {
     background: var(--color-bg-alt);
 }
 
+/* Category Tabs */
+.menu-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+.menu-tab {
+    padding: 10px 22px;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-full);
+    background: var(--color-bg-card);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.menu-tab:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.menu-tab.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 15px rgba(212, 66, 30, 0.3);
+}
+
 /* Size Legend */
 .size-legend {
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     font-size: 0.9rem;
     color: var(--color-text-light);
 }
@@ -457,27 +493,11 @@ h2 {
     overflow: hidden;
 }
 
-/* SVG background illustration — full card coverage */
-.menu-item-svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 180px;
-    height: 180px;
-    pointer-events: none;
-    opacity: 1;
-    transition: opacity var(--transition), transform var(--transition);
-}
-
-.menu-item-svg svg {
-    width: 100%;
-    height: 100%;
-}
-
-.menu-item:hover .menu-item-svg {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.15) rotate(3deg);
+/* Emoji icon */
+.menu-item-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    line-height: 1;
 }
 
 .menu-item::before {
@@ -514,18 +534,12 @@ h2 {
     border-color: var(--color-primary);
 }
 
-.menu-item.hidden {
-    display: none;
-}
-
 .menu-item-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 6px;
     gap: 12px;
-    position: relative;
-    z-index: 1;
 }
 
 .menu-item h4 {
@@ -538,8 +552,6 @@ h2 {
     font-size: 0.88rem;
     color: var(--color-text-light);
     line-height: 1.5;
-    position: relative;
-    z-index: 1;
 }
 
 .price {
@@ -547,6 +559,12 @@ h2 {
     color: var(--color-primary);
     font-size: 1rem;
     white-space: nowrap;
+}
+
+.price small {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
 }
 
 .menu-badge {
@@ -558,8 +576,6 @@ h2 {
     padding: 4px 10px;
     border-radius: var(--radius-full);
     margin-top: 10px;
-    position: relative;
-    z-index: 1;
 }
 
 .menu-badge.popular {
@@ -763,6 +779,64 @@ h2 {
     opacity: 0.5;
 }
 
+/* ========== QR CODE SECTION ========== */
+#qr-code-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--color-bg-alt) 0%, #fff 100%);
+    border-top: 1px solid var(--color-border);
+}
+
+.qr-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    background: #fff;
+    padding: 50px;
+    border-radius: calc(var(--radius) * 2);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--color-border);
+}
+
+.qr-content h2 {
+    margin-bottom: 1.5rem;
+}
+
+.qr-content p {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.qr-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.qr-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-bg-alt);
+    padding: 30px;
+    border-radius: var(--radius);
+    border: 2px dashed var(--color-border);
+    transition: all var(--transition);
+}
+
+.qr-image-container:hover {
+    border-color: var(--color-primary);
+    background: #fff;
+}
+
+.qr-image-container img {
+    width: 240px;
+    height: 240px;
+    display: block;
+    mix-blend-mode: multiply;
+}
+
 /* ========== MOBILE RESPONSIVE ========== */
 @media (max-width: 900px) {
     .about-content {
@@ -835,6 +909,22 @@ h2 {
         width: 100%;
         max-width: 280px;
         justify-content: center;
+    }
+
+    .qr-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .qr-actions {
+        justify-content: center;
+    }
+
+    .qr-image-container img {
+        width: 200px;
+        height: 200px;
     }
 
     .about-features {

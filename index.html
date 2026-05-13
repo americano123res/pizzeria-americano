@@ -3,28 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO: Title shown in Google results and browser tab -->
     <title>Pizzeria Americano — Authentic Pizza in Ohrid, North Macedonia</title>
-
-    <!-- SEO: Description shown under title in Google results -->
-    <meta name="description" content="Pizzeria Americano in Ohrid serves authentic Italian pizza, pasta, and more. Affordable prices, cozy atmosphere, located near the city center on Petar Čaulev BR.31.">
-
-    <!-- Open Graph: Makes link look good when shared on Facebook/WhatsApp -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
+    <meta name="description" content="Pizzeria Americano in Ohrid serves authentic Italian pizza, pasta, and more. Affordable prices, cozy atmosphere, located on Branko Shotra 2. Est. 1996.">
     <meta property="og:title" content="Pizzeria Americano — Ohrid">
     <meta property="og:description" content="Authentic Italian pizza & pasta in the heart of Ohrid, North Macedonia.">
     <meta property="og:image" content="images/hero.png">
     <meta property="og:type" content="website">
-
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Google Fonts (premium typography) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome for social media & UI icons (free CDN) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -49,7 +38,7 @@
     <header id="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <p class="hero-badge">🇮🇹 Est. in Ohrid</p>
+            <p class="hero-badge">🇮🇹 Est. 1996 · Ohrid</p>
             <h1>Pizzeria Americano</h1>
             <p class="hero-subtitle">Authentic Italian Pizza on the Shores of Lake Ohrid</p>
             <div class="hero-buttons">
@@ -72,9 +61,9 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        Nestled in the heart of beautiful Ohrid, on Petar Čaulev BR.31, 
+                        Nestled in the heart of beautiful Ohrid, on Branko Shotra 2, 
                         Pizzeria Americano has been delighting locals and visitors with 
-                        authentic Italian flavors. Our handcrafted pizzas, fresh pastas, 
+                        authentic Italian flavors since 1996. Our handcrafted pizzas, fresh pastas, 
                         and warm hospitality make every meal a memorable experience.
                     </p>
                     <p>
@@ -82,7 +71,6 @@
                         stunning Lake Ohrid, or simply craving the perfect pizza — we're 
                         here to serve you with love and tradition.
                     </p>
-                    <!-- CHANGE THIS: Write your own story! -->
                     <div class="about-features">
                         <div class="feature">
                             <i class="fas fa-pizza-slice"></i>
@@ -115,337 +103,32 @@
             <div class="section-header">
                 <span class="section-tag">What We Serve</span>
                 <h2>Our Menu</h2>
-                <p class="section-subtitle">Fresh ingredients, authentic recipes — two sizes available 🇮🇹</p>
+                <p class="section-subtitle">Fresh ingredients, authentic recipes 🇮🇹</p>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="menu-tabs" id="menuTabs">
+                <button class="menu-tab active" data-cat="all">All</button>
+                <button class="menu-tab" data-cat="pizza">🍕 Pizza</button>
+                <button class="menu-tab" data-cat="pasta">🍝 Pasta</button>
+                <button class="menu-tab" data-cat="grill">🔥 Grill</button>
+                <button class="menu-tab" data-cat="breakfast">🍳 Breakfast</button>
+                <button class="menu-tab" data-cat="salads">🥗 Salads</button>
+                <button class="menu-tab" data-cat="drinks">🥤 Drinks</button>
             </div>
 
             <!-- Size Legend -->
-            <div class="size-legend">
-                <span>Prices shown as: <strong>Regular</strong> / <strong>Family</strong></span>
+            <div class="size-legend" id="sizeLegend">
+                <span>Pizza prices shown as: <strong>Small</strong> / <strong>Large</strong></span>
             </div>
 
-            <!-- MENU ITEMS GRID -->
+            <!-- Dynamic Menu Grid -->
             <div class="menu-grid" id="menuGrid">
-
-                <!-- 1. MARGARITA -->
-                <div class="menu-item" data-category="pizza">
-                    <div class="menu-item-svg">
-                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="60" cy="60" r="55" fill="#D4421E" opacity="0.07"/>
-                            <circle cx="60" cy="60" r="55" fill="none" stroke="#F5A623" stroke-width="3" opacity="0.20"/>
-                            <circle cx="35" cy="40" r="10" fill="#E8654A" opacity="0.18"/>
-                            <circle cx="80" cy="35" r="12" fill="#E8654A" opacity="0.15"/>
-                            <circle cx="50" cy="85" r="14" fill="#E8654A" opacity="0.12"/>
-                            <circle cx="90" cy="75" r="9" fill="#E8654A" opacity="0.14"/>
-                            <circle cx="60" cy="58" r="15" fill="#F5A623" opacity="0.12"/>
-                            <path d="M25 55 Q35 40 45 55 Q35 62 25 55Z" fill="#2E7D32" opacity="0.22"/>
-                            <path d="M75 70 Q85 58 95 70 Q85 76 75 70Z" fill="#2E7D32" opacity="0.18"/>
-                            <path d="M55 25 Q62 15 69 25 Q62 30 55 25Z" fill="#2E7D32" opacity="0.15"/>
-                        </svg>
-                    </div>
-                    <div class="menu-item-header">
-                        <h4>Margarita</h4>
-                        <span class="price">330 / 370</span>
-                    </div>
-                    <p>🍅 Tomato sauce · 🧀 Cheese</p>
-                </div>
-
-                <!-- 2. NAPOLITANA -->
-                <div class="menu-item" data-category="pizza">
-                    <div class="menu-item-svg">
-                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="60" cy="60" r="55" fill="#8B6914" opacity="0.06"/>
-                            <circle cx="60" cy="60" r="55" fill="none" stroke="#A67C00" stroke-width="3" opacity="0.18"/>
-                            <path d="M20 50 Q20 28 40 28 Q40 50 20 50Z" fill="#8B6914" opacity="0.22" transform="rotate(-10 30 39)"/>
-                            <rect x="27" y="50" width="6" height="16" rx="3" fill="#8B6914" opacity="0.18"/>
-                            <path d="M65 40 Q65 20 85 20 Q85 40 65 40Z" fill="#A67C00" opacity="0.18" transform="rotate(8 75 30)"/>
-                            <rect x="72" y="40" width="6" height="14" rx="3" fill="#A67C00" opacity="0.15"/>
-                            <path d="M40 85 Q40 70 55 70 Q55 85 40 85Z" fill="#8B6914" opacity="0.14"/>
-                            <rect x="45" y="85" width="5" height="12" rx="2.5" fill="#8B6914" opacity="0.12"/>
-                            <path d="M85 75 L100 60 L110 80Z" fill="#F5A623" opacity="0.12"/>
-                        </svg>
-                    </div>
-                    <div class="menu-item-header">
-                        <h4>Napolitana</h4>
-                        <span class="price">350 / 400</span>
-                    </div>
-                    <p>🍅 Tomato sauce · 🧀 Cheese · 🍄 Mushrooms</p>
-                </div>
-
-                <!-- 3. CARDINALE -->
-                <div class="menu-item" data-category="pizza">
-                    <div class="menu-item-svg">
-                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="60" cy="60" r="55" fill="#E8998A" opacity="0.08"/>
-                            <circle cx="60" cy="60" r="55" fill="none" stroke="#D4421E" stroke-width="3" opacity="0.18"/>
-                            <ellipse cx="35" cy="40" rx="22" ry="12" fill="#E8998A" opacity="0.25" transform="rotate(-20 35 40)"/>
-                            <ellipse cx="85" cy="50" rx="20" ry="10" fill="#E8998A" opacity="0.20" transform="rotate(15 85 50)"/>
-                            <ellipse cx="50" cy="80" rx="24" ry="10" fill="#E8998A" opacity="0.15" transform="rotate(-8 50 80)"/>
-                            <circle cx="30" cy="38" r="2.5" fill="#D4421E" opacity="0.20"/>
-                            <circle cx="82" cy="48" r="2" fill="#D4421E" opacity="0.18"/>
-                            <circle cx="45" cy="78" r="1.8" fill="#D4421E" opacity="0.15"/>
-                            <circle cx="70" cy="30" r="2" fill="#D4421E" opacity="0.12"/>
-                        </svg>
-                    </div>
-                    <div class="menu-item-header">
-                        <h4>Cardinale</h4>
-                        <span class="price">350 / 400</span>
-                    </div>
-                    <p>🍅 Tomato sauce · 🧀 Cheese · 🍗 Chicken ham</p>
-                </div>
-
-                <!-- 4. MAFIOSI -->
-                <div class="menu-item" data-category="pizza">
-                    <div class="menu-item-svg">
-                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="60" cy="60" r="55" fill="#5D4037" opacity="0.06"/>
-                            <circle cx="60" cy="60" r="55" fill="none" stroke="#795548" stroke-width="3" opacity="0.18"/>
-                            <rect x="15" y="30" width="35" height="8" rx="4" fill="#795548" opacity="0.22" transform="rotate(-15 32 34)"/>
-                            <rect x="55" y="25" width="40" height="7" rx="3.5" fill="#795548" opacity="0.18" transform="rotate(10 75 28)"/>
-                            <rect x="25" y="80" width="30" height="7" rx="3.5" fill="#795548" opacity="0.14" transform="rotate(5 40 83)"/>
-                            <path d="M25 65 Q25 48 42 48 Q42 65 25 65Z" fill="#8B6914" opacity="0.20"/>
-                            <rect x="30" y="65" width="5" height="12" rx="2.5" fill="#8B6914" opacity="0.16"/>
-                            <path d="M75 70 Q75 55 90 55 Q90 70 75 70Z" fill="#A67C00" opacity="0.16"/>
-                            <rect x="80" y="70" width="5" height="10" rx="2.5" fill="#A67C00" opacity="0.12"/>
-                        </svg>
-                    </div>
-                    <div class="menu-item-header">
-                        <h4>Mafiosi</h4>
-                        <span class="price">370 / 430</span>
-                    </div>
-                    <p>🍅 Tomato sauce · 🧀 Cheese · 🥓 Smoked meat · 🍄 Mushrooms</p>
-                </div>
-
-                <!-- 5. VEGETARIA -->
-                <div class="menu-item" data-category="pizza">
-                    <div class="menu-item-svg">
-                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="60" cy="60" r="55" fill="#4CAF50" opacity="0.06"/>
-                            <circle cx="60" cy="60" r="55" fill="none" stroke="#2E7D32" stroke-width="3" opacity="0.18"/>
-                            <path d="M15 45 Q8 28 25 22 Q32 38 20 52Z" fill="#F44336" opacity="0.20"/>
-                            <path d="M90 30 Q84 15 100 10 Q105 25 95 38Z" fill="#E53935" opacity="0.16"/>
-                            <path d="M70 30 Q70 15 85 15 Q85 30 70 30Z" fill="#8B6914" opacity="0.18"/>
-                            <rect x="75" y="30" width="5" height="12" rx="2.5" fill="#8B6914" opacity="0.14"/>
-                            <circle cx="40" cy="80" r="14" fill="none" stroke="#7B1FA2" stroke-width="3" opacity="0.16"/>
-                            <circle cx="40" cy="80" r="8" fill="none" stroke="#9C27B0" stroke-width="2.5" opacity="0.12"/>
-                            <circle cx="90" cy="70" r="10" fill="#33691E" opacity="0.20"/>
-                            <circle cx="90" cy="70" r="4" fill="#FFFAF6" opacity="0.18"/>
-                            <path d="M15 75 Q28 60 40 75 Q28 82 15 75Z" fill="#2E7D32" opacity="0.18"/>
-                            <path d="M65 90 Q75 80 85 90 Q75 96 65 90Z" fill="#388E3C" opacity="0.14"/>
-                        </svg>
-                    </div>
-                    <div class="menu-item-header">
-                        <h4>Vegetaria</h4>
-                        <span class="price">370 / 430</span>
-                    </div>
-                    <p>🍅 Tomato sauce · 🧀 Cheese · 🍄 Mushrooms · 🧅 Onion · 🌶️ Peppers</p>
-                </div>
-
-                <!-- 6. BOLOGNESE -->
-                <div class="menu-item" data-category="pizza">
-                    <div class="menu-item-svg">
-                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="60" cy="60" r="55" fill="#D4421E" opacity="0.06"/>
-                            <circle cx="60" cy="60" r="55" fill="none" stroke="#D4421E" stroke-width="3" opacity="0.16"/>
-                            <circle cx="25" cy="35" r="6" fill="#795548" opacity="0.22"/>
-                            <circle cx="42" cy="28" r="5" fill="#795548" opacity="0.18"/>
-                            <circle cx="60" cy="38" r="7" fill="#795548" opacity="0.20"/>
-                            <circle cx="80" cy="30" r="4.5" fill="#795548" opacity="0.16"/>
-                            <circle cx="95" cy="42" r="6" fill="#795548" opacity="0.14"/>
-                            <circle cx="35" cy="50" r="5" fill="#795548" opacity="0.16"/>
-                            <circle cx="75" cy="48" r="5.5" fill="#795548" opacity="0.12"/>
-                            <circle cx="50" cy="45" r="4" fill="#795548" opacity="0.14"/>
-                            <circle cx="15" cy="55" r="4.5" fill="#795548" opacity="0.10"/>
-                            <ellipse cx="55" cy="85" rx="22" ry="16" fill="#FFF9C4" opacity="0.25"/>
-                            <circle cx="55" cy="83" r="9" fill="#F5A623" opacity="0.22"/>
-                        </svg>
-                    </div>
-                    <div class="menu-item-header">
-                        <h4>Bolognese</h4>
-                        <span class="price">370 / 430</span>
-                    </div>
-                    <p>🍅 Tomato sauce · 🧀 Cheese · 🥩 Minced meat · 🥚 Egg</p>
-                </div>
-
-                <!-- 7. CAPRICIOSA -->
-                <div class="menu-item" data-category="pizza">
-                    <div class="menu-item-svg">
-                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="60" cy="60" r="55" fill="#E8654A" opacity="0.06"/>
-                            <circle cx="60" cy="60" r="55" fill="none" stroke="#E8654A" stroke-width="3" opacity="0.16"/>
-                            <ellipse cx="30" cy="35" rx="20" ry="10" fill="#E8998A" opacity="0.25" transform="rotate(-12 30 35)"/>
-                            <ellipse cx="85" cy="80" rx="18" ry="8" fill="#E8998A" opacity="0.18" transform="rotate(8 85 80)"/>
-                            <path d="M65 25 Q65 10 82 10 Q82 25 65 25Z" fill="#8B6914" opacity="0.22"/>
-                            <rect x="71" y="25" width="5" height="14" rx="2.5" fill="#8B6914" opacity="0.18"/>
-                            <path d="M20 75 Q20 62 32 62 Q32 75 20 75Z" fill="#A67C00" opacity="0.18"/>
-                            <rect x="23" y="75" width="5" height="10" rx="2.5" fill="#A67C00" opacity="0.14"/>
-                            <path d="M55 90 Q55 78 68 78 Q68 90 55 90Z" fill="#8B6914" opacity="0.14"/>
-                            <rect x="59" y="90" width="4" height="8" rx="2" fill="#8B6914" opacity="0.10"/>
-                        </svg>
-                    </div>
-                    <div class="menu-item-header">
-                        <h4>Capriciosa</h4>
-                        <span class="price">370 / 420</span>
-                    </div>
-                    <p>🍅 Tomato sauce · 🧀 Cheese · 🍗 Chicken ham · 🍄 Mushrooms</p>
-                    <span class="menu-badge popular">Popular</span>
-                </div>
-
-                <!-- 8. ISTANBUL -->
-                <div class="menu-item" data-category="pizza">
-                    <div class="menu-item-svg">
-                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="60" cy="60" r="55" fill="#FF6F00" opacity="0.06"/>
-                            <circle cx="60" cy="60" r="55" fill="none" stroke="#FF6F00" stroke-width="3" opacity="0.18"/>
-                            <path d="M18 30 Q38 20 38 50 Q22 50 18 30Z" fill="#FF6F00" opacity="0.22"/>
-                            <polygon points="55,15 59,28 72,28 62,35 65,48 55,40 45,48 48,35 38,28 51,28" fill="#FF8F00" opacity="0.18"/>
-                            <ellipse cx="85" cy="50" rx="16" ry="12" fill="#FFF9C4" opacity="0.22"/>
-                            <circle cx="85" cy="48" r="6" fill="#F5A623" opacity="0.18"/>
-                            <path d="M25 72 Q25 58 40 58 Q40 72 25 72Z" fill="#8B6914" opacity="0.16"/>
-                            <rect x="30" y="72" width="5" height="10" rx="2.5" fill="#8B6914" opacity="0.12"/>
-                            <circle cx="70" cy="88" r="14" fill="#FAFAFA" opacity="0.15"/>
-                            <path d="M60 88 Q70 78 80 88" fill="none" stroke="#E0E0E0" stroke-width="3" opacity="0.18"/>
-                            <path d="M63 92 Q70 84 77 92" fill="none" stroke="#EEEEEE" stroke-width="2" opacity="0.14"/>
-                        </svg>
-                    </div>
-                    <div class="menu-item-header">
-                        <h4>Istanbul</h4>
-                        <span class="price">400 / 450</span>
-                    </div>
-                    <p>🍅 Tomato sauce · 🧀 Cheese · 🍗 Chicken ham · 🍄 Mushrooms · 🥚 Egg · 🍦 Sour cream</p>
-                </div>
-
-                <!-- 9. ORIENTAL -->
-                <div class="menu-item" data-category="pizza">
-                    <div class="menu-item-svg">
-                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="60" cy="60" r="55" fill="#B71C1C" opacity="0.05"/>
-                            <circle cx="60" cy="60" r="55" fill="none" stroke="#C62828" stroke-width="3" opacity="0.18"/>
-                            <circle cx="28" cy="38" r="14" fill="#C62828" opacity="0.20"/>
-                            <circle cx="28" cy="38" r="9" fill="#E53935" opacity="0.12"/>
-                            <circle cx="80" cy="30" r="12" fill="#C62828" opacity="0.16"/>
-                            <circle cx="80" cy="30" r="8" fill="#E53935" opacity="0.10"/>
-                            <circle cx="50" cy="75" r="15" fill="#B71C1C" opacity="0.14"/>
-                            <circle cx="50" cy="75" r="10" fill="#D32F2F" opacity="0.08"/>
-                            <circle cx="95" cy="65" r="10" fill="#C62828" opacity="0.12"/>
-                            <circle cx="90" cy="85" r="5" fill="#795548" opacity="0.20"/>
-                            <circle cx="100" cy="78" r="4" fill="#795548" opacity="0.16"/>
-                            <circle cx="85" cy="92" r="4.5" fill="#795548" opacity="0.14"/>
-                            <circle cx="15" cy="70" r="3.5" fill="#795548" opacity="0.12"/>
-                        </svg>
-                    </div>
-                    <div class="menu-item-header">
-                        <h4>Oriental</h4>
-                        <span class="price">370 / 430</span>
-                    </div>
-                    <p>🍅 Tomato sauce · 🧀 Cheese · 🌶️ Beef pepperoni · 🥩 Minced meat</p>
-                </div>
-
-                <!-- 10. QUATTRO STAGIONI -->
-                <div class="menu-item" data-category="pizza">
-                    <div class="menu-item-svg">
-                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="60" cy="60" r="55" fill="none" stroke="#F5A623" stroke-width="3" opacity="0.20"/>
-                            <line x1="60" y1="5" x2="60" y2="115" stroke="#F5A623" stroke-width="2" opacity="0.15"/>
-                            <line x1="5" y1="60" x2="115" y2="60" stroke="#F5A623" stroke-width="2" opacity="0.15"/>
-                            <rect x="68" y="22" width="28" height="7" rx="3.5" fill="#795548" opacity="0.22" transform="rotate(-12 82 25)"/>
-                            <rect x="70" y="38" width="22" height="6" rx="3" fill="#795548" opacity="0.16" transform="rotate(8 81 41)"/>
-                            <path d="M18 28 Q18 14 32 14 Q32 28 18 28Z" fill="#8B6914" opacity="0.22"/>
-                            <rect x="22" y="28" width="5" height="12" rx="2.5" fill="#8B6914" opacity="0.18"/>
-                            <path d="M18 72 Q28 62 45 72 Q38 82 18 72Z" fill="#1565C0" opacity="0.18"/>
-                            <path d="M22 80 Q30 74 38 80" fill="none" stroke="#1565C0" stroke-width="2" opacity="0.12"/>
-                            <circle cx="82" cy="82" r="12" fill="none" stroke="#7B1FA2" stroke-width="3" opacity="0.18"/>
-                            <circle cx="82" cy="82" r="6" fill="none" stroke="#9C27B0" stroke-width="2" opacity="0.12"/>
-                        </svg>
-                    </div>
-                    <div class="menu-item-header">
-                        <h4>Quattro Stagioni</h4>
-                        <span class="price">400 / 450</span>
-                    </div>
-                    <p>🍅 Tomato sauce · 🧀 Cheese · 🥓 Smoked meat · 🍄 Mushrooms · 🐟 Tuna · 🧅 Onion</p>
-                </div>
-
-                <!-- 11. AMERICANO SPECIAL -->
-                <div class="menu-item special" data-category="pizza">
-                    <div class="menu-item-svg">
-                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="60" cy="60" r="56" fill="none" stroke="#F5A623" stroke-width="4" opacity="0.25"/>
-                            <circle cx="60" cy="60" r="48" fill="none" stroke="#D4421E" stroke-width="2.5" opacity="0.15"/>
-                            <circle cx="60" cy="60" r="40" fill="#D4421E" opacity="0.06"/>
-                            <polygon points="60,5 66,20 82,20 69,30 74,46 60,36 46,46 51,30 38,20 54,20" fill="#F5A623" opacity="0.22"/>
-                            <ellipse cx="28" cy="55" rx="18" ry="10" fill="#E8998A" opacity="0.20" transform="rotate(-10 28 55)"/>
-                            <path d="M75 38 Q75 22 92 22 Q92 38 75 38Z" fill="#8B6914" opacity="0.18"/>
-                            <rect x="81" y="38" width="5" height="12" rx="2.5" fill="#8B6914" opacity="0.14"/>
-                            <circle cx="92" cy="75" r="8" fill="#33691E" opacity="0.18"/>
-                            <circle cx="92" cy="75" r="3" fill="#FFFAF6" opacity="0.15"/>
-                            <rect x="20" y="82" width="30" height="6" rx="3" fill="#795548" opacity="0.16" transform="rotate(-5 35 85)"/>
-                            <ellipse cx="70" cy="90" rx="16" ry="8" fill="#E8998A" opacity="0.14" transform="rotate(5 70 90)"/>
-                        </svg>
-                    </div>
-                    <div class="menu-item-header">
-                        <h4>Americano Special ⭐</h4>
-                        <span class="price">420 / 470</span>
-                    </div>
-                    <p>🍅 Tomato sauce · 🧀 Cheese · 🍗 Chicken ham · 🍄 Mushrooms · 🥓 Smoked meat · 🫒 Olive · 🍗 Chicken breast</p>
-                    <span class="menu-badge house">House Special</span>
-                </div>
-
-                <!-- 12. TONNO -->
-                <div class="menu-item" data-category="pizza">
-                    <div class="menu-item-svg">
-                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="60" cy="60" r="55" fill="#1565C0" opacity="0.05"/>
-                            <circle cx="60" cy="60" r="55" fill="none" stroke="#1565C0" stroke-width="3" opacity="0.18"/>
-                            <path d="M10 50 Q35 25 70 42 Q50 50 70 58 Q35 75 10 50Z" fill="#1565C0" opacity="0.16"/>
-                            <circle cx="22" cy="48" r="3" fill="#0D47A1" opacity="0.22"/>
-                            <path d="M70 42 Q88 28 88 62 Q88 58 70 58Z" fill="#1976D2" opacity="0.12"/>
-                            <circle cx="88" cy="78" r="12" fill="none" stroke="#7B1FA2" stroke-width="3" opacity="0.18"/>
-                            <circle cx="88" cy="78" r="7" fill="none" stroke="#9C27B0" stroke-width="2" opacity="0.12"/>
-                            <path d="M10 90 Q25 82 40 90 Q55 98 70 90 Q85 82 100 90" fill="none" stroke="#1565C0" stroke-width="2" opacity="0.12"/>
-                            <path d="M15 100 Q30 92 45 100 Q60 108 75 100 Q90 92 105 100" fill="none" stroke="#1976D2" stroke-width="1.5" opacity="0.08"/>
-                        </svg>
-                    </div>
-                    <div class="menu-item-header">
-                        <h4>Tonno</h4>
-                        <span class="price">400 / 450</span>
-                    </div>
-                    <p>🍅 Tomato sauce · 🧀 Cheese · 🐟 Tuna · 🧅 Onion</p>
-                </div>
-
-                <!-- 13. FRUTTI DI MARE -->
-                <div class="menu-item" data-category="pizza">
-                    <div class="menu-item-svg">
-                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="60" cy="60" r="55" fill="#0277BD" opacity="0.05"/>
-                            <circle cx="60" cy="60" r="55" fill="none" stroke="#0277BD" stroke-width="3" opacity="0.18"/>
-                            <path d="M15 35 Q28 22 38 30 Q32 40 22 44Z" fill="#E8654A" opacity="0.22"/>
-                            <path d="M22 44 Q16 55 22 62" fill="none" stroke="#E8654A" stroke-width="3" opacity="0.16"/>
-                            <circle cx="18" cy="62" r="2" fill="#E8654A" opacity="0.14"/>
-                            <path d="M75 20 Q82 8 90 20 L82 35Z" fill="#F5A623" opacity="0.20"/>
-                            <line x1="78" y1="20" x2="82" y2="33" stroke="#E8A317" stroke-width="1" opacity="0.18"/>
-                            <line x1="82" y1="16" x2="84" y2="33" stroke="#E8A317" stroke-width="1" opacity="0.18"/>
-                            <line x1="86" y1="20" x2="85" y2="33" stroke="#E8A317" stroke-width="1" opacity="0.18"/>
-                            <path d="M30 78 Q40 62 58 68 Q48 78 58 92" fill="none" stroke="#7B1FA2" stroke-width="3.5" opacity="0.16"/>
-                            <circle cx="30" cy="78" r="2.5" fill="#7B1FA2" opacity="0.14"/>
-                            <circle cx="40" cy="68" r="2" fill="#7B1FA2" opacity="0.12"/>
-                            <path d="M5 100 Q20 90 35 100 Q50 110 65 100 Q80 90 95 100 Q110 110 120 100" fill="none" stroke="#0277BD" stroke-width="2.5" opacity="0.14"/>
-                            <path d="M0 108 Q15 100 30 108 Q45 116 60 108 Q75 100 90 108 Q105 116 120 108" fill="none" stroke="#0288D1" stroke-width="2" opacity="0.10"/>
-                            <circle cx="95" cy="50" r="6" fill="#0277BD" opacity="0.12"/>
-                            <circle cx="105" cy="40" r="4" fill="#0288D1" opacity="0.10"/>
-                            <circle cx="88" cy="62" r="5" fill="#0277BD" opacity="0.08"/>
-                        </svg>
-                    </div>
-                    <div class="menu-item-header">
-                        <h4>Frutti di Mare</h4>
-                        <span class="price">600 / 750</span>
-                    </div>
-                    <p>🍅 Tomato sauce · 🧀 Cheese · 🦐 Sea fruit</p>
-                    <span class="menu-badge premium">Premium</span>
-                </div>
-
+                <!-- Rendered by script.js from menu-data.js -->
             </div>
 
             <p class="menu-note">
-                * All prices in Macedonian Denars (MKD). Prices shown as Regular / Family size.
+                * All prices in Macedonian Denars (MKD).
             </p>
         </div>
     </section>
@@ -463,14 +146,14 @@
                         <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
                             <h4>Address</h4>
-                            <p>Petar Čaulev BR.31<br>Ohrid, North Macedonia</p>
+                            <p>Branko Shotra 2<br>Ohrid 6000, North Macedonia</p>
                         </div>
                     </div>
                     <div class="info-card">
                         <div class="info-icon"><i class="fas fa-phone"></i></div>
                         <div>
                             <h4>Phone</h4>
-                            <p><a href="tel:+38946205202">+389 46 20 52 02</a></p>
+                            <p><a href="tel:+38946205202">+389 46 20 52 02</a><br><a href="tel:+38970732832">+389 70 732 832</a></p>
                         </div>
                     </div>
                     <div class="info-card">
@@ -488,26 +171,35 @@
                         </div>
                     </div>
                 </div>
-                <!-- Google Maps Embed -->
                 <div class="map-container">
-                    <!--
-                        HOW TO GET YOUR OWN EMBED CODE:
-                        1. Go to maps.google.com
-                        2. Search for your restaurant
-                        3. Click "Share" → "Embed a map"
-                        4. Copy the <iframe> code and paste it here
-                    -->
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2989.5!2d20.7985!3d41.1128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sPizzeria%20Americano!5e0!3m2!1sen!2smk!4v1234567890"
-                        width="100%"
-                        height="100%"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
+                        width="100%" height="100%" style="border:0;"
+                        allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
                         title="Pizzeria Americano on Google Maps">
                     </iframe>
-                    <!-- CHANGE THIS: Replace the iframe src with your actual Google Maps embed URL -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== QR CODE SECTION ==================== -->
+    <section id="qr-code-section">
+        <div class="container">
+            <div class="qr-wrapper">
+                <div class="qr-content">
+                    <span class="section-tag">Digital Menu</span>
+                    <h2>Scan to Explore</h2>
+                    <p>Scan this QR code with your phone to view our full digital menu, share it with friends, or save it for later! 🍕</p>
+                    <div class="qr-actions">
+                        <a href="images/qr-code.png" download="Pizzeria-Americano-Menu-QR" class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download for Print
+                        </a>
+                    </div>
+                </div>
+                <div class="qr-image-container">
+                    <img src="images/qr-code.png" alt="Pizzeria Americano Menu QR Code" loading="lazy">
                 </div>
             </div>
         </div>
@@ -519,7 +211,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <h3>🍕 Pizzeria Americano</h3>
-                    <p>Authentic Italian flavors on the shores of Lake Ohrid since day one. Come hungry, leave happy.</p>
+                    <p>Authentic Italian flavors on the shores of Lake Ohrid since 1996. Come hungry, leave happy.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -531,16 +223,12 @@
                 </div>
                 <div class="footer-social">
                     <h4>Follow Us</h4>
-                    <!-- CHANGE THESE URLs to your actual pages! -->
                     <div class="social-links">
-                        <a href="https://www.facebook.com/PizzeriaAmericano" target="_blank" rel="noopener" aria-label="Facebook" title="Follow us on Facebook">
+                        <a href="https://www.facebook.com/PizzeriaAmericano" target="_blank" rel="noopener" aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="https://www.instagram.com/pizzeriaamericano_ohrid" target="_blank" rel="noopener" aria-label="Instagram" title="Follow us on Instagram">
+                        <a href="https://www.instagram.com/pizzeriaamericano_ohrid" target="_blank" rel="noopener" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.tripadvisor.com/Restaurant_Review-g303864-d6600162-Reviews-Pizzeria_Americano-Ohrid_Southwestern_Region.html" target="_blank" rel="noopener" aria-label="TripAdvisor" title="See our TripAdvisor reviews">
-                            <i class="fab fa-tripadvisor"></i>
                         </a>
                     </div>
                 </div>
@@ -552,6 +240,7 @@
     </footer>
 
     <!-- JavaScript -->
+    <script src="menu-data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

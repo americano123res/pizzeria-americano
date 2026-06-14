@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ftesë Dasme — Urim & Malisa</title>
+    <meta name="description" content="Ju ftojmë me dashuri në dasmën tonë — Urim & Malisa, 02 Gusht 2026">
+
+    <!-- WhatsApp / Social Media Preview -->
+    <meta property="og:title" content="💍 Ftesë Dasme — Urim & Malisa">
+    <meta property="og:description" content="Ju ftojnë në dasmën tonë! 02 Gusht 2026, Ora 19:00 — Restorant Dardania, Kërçovë">
+    <meta property="og:image" content="cover-preview.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating petals canvas -->
+    <canvas id="fx-canvas"></canvas>
+
+    <!-- Sparkle burst canvas (for opening effect) -->
+    <canvas id="burst-canvas"></canvas>
+
+    <!-- ====== INTRO / ENVELOPE SCREEN ====== -->
+    <div class="intro-screen" id="intro-screen">
+
+        <!-- Animated background glow -->
+        <div class="intro-glow glow-1"></div>
+        <div class="intro-glow glow-2"></div>
+        <div class="intro-glow glow-3"></div>
+
+        <div class="intro-content" id="intro-content">
+            <!-- Rings with sparkle -->
+            <div class="intro-rings" id="intro-rings">
+                <div class="ring-sparkles">
+                    <span class="sparkle s1">✦</span>
+                    <span class="sparkle s2">✧</span>
+                    <span class="sparkle s3">✦</span>
+                    <span class="sparkle s4">✧</span>
+                </div>
+                <svg viewBox="0 0 100 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="36" cy="32" rx="18" ry="18" stroke="url(#ring1)" stroke-width="2.5" fill="none"/>
+                    <ellipse cx="64" cy="32" rx="18" ry="18" stroke="url(#ring2)" stroke-width="2.5" fill="none"/>
+                    <polygon points="36,14 39,10 36,6 33,10" fill="#D4A84C" opacity="0.8"/>
+                    <defs>
+                        <linearGradient id="ring1" x1="18" y1="14" x2="54" y2="50">
+                            <stop offset="0%" stop-color="#F0D48A"/>
+                            <stop offset="100%" stop-color="#C9A84C"/>
+                        </linearGradient>
+                        <linearGradient id="ring2" x1="46" y1="14" x2="82" y2="50">
+                            <stop offset="0%" stop-color="#E8C88A"/>
+                            <stop offset="100%" stop-color="#B8952E"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Envelope icon that opens -->
+            <div class="envelope-anim" id="envelope-anim">
+                <div class="envelope-back">
+                    <div class="envelope-letter">
+                        <span class="letter-heart">♥</span>
+                    </div>
+                </div>
+                <div class="envelope-flap" id="envelope-flap"></div>
+            </div>
+
+            <p class="intro-names" id="intro-names">Urim & Malisa</p>
+            <p class="intro-subtitle" id="intro-subtitle">Ju ftojnë në dasmën tonë</p>
+
+            <div class="intro-date" id="intro-date">
+                <span>02 . 08 . 2026</span>
+            </div>
+
+            <div class="intro-line"></div>
+
+            <button class="open-btn" id="open-btn">
+                <span class="open-btn-text">Hap Ftesën</span>
+                <span class="btn-icon">💌</span>
+            </button>
+
+            <p class="tap-hint">Kliko për të hapur</p>
+        </div>
+    </div>
+
+    <!-- ====== MAIN CARD ====== -->
+    <div class="card-scroll-wrapper" id="card-wrapper">
+        <div class="card" id="card">
+
+            <!-- Floral Header -->
+            <div class="floral-header">
+                <img src="floral-header.png" alt="" class="floral-img">
+            </div>
+
+            <!-- Wedding Rings -->
+            <div class="rings-center anim" data-delay="200">
+                <svg viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="rings-svg">
+                    <ellipse cx="28" cy="25" rx="15" ry="15" stroke="url(#rg-c1)" stroke-width="2" fill="none"/>
+                    <ellipse cx="52" cy="25" rx="15" ry="15" stroke="url(#rg-c2)" stroke-width="2" fill="none"/>
+                    <polygon points="28,10 31,6 28,2 25,6" fill="#D4A84C" opacity="0.7"/>
+                    <defs>
+                        <linearGradient id="rg-c1" x1="13" y1="10" x2="43" y2="40">
+                            <stop offset="0%" stop-color="#F0D48A"/>
+                            <stop offset="100%" stop-color="#C9A84C"/>
+                        </linearGradient>
+                        <linearGradient id="rg-c2" x1="37" y1="10" x2="67" y2="40">
+                            <stop offset="0%" stop-color="#E8C88A"/>
+                            <stop offset="100%" stop-color="#B8952E"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Greeting -->
+            <p class="greeting anim" data-delay="300">Të dashur familjarë dhe miq,</p>
+
+            <!-- Gold divider -->
+            <div class="gold-divider anim" data-delay="400">
+                <svg viewBox="0 0 260 12" class="divider-svg">
+                    <line x1="0" y1="6" x2="105" y2="6" stroke="#C9A84C" stroke-width="0.6" opacity="0.5"/>
+                    <path d="M115 6 L125 2 L135 6 L125 10 Z" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.7"/>
+                    <line x1="145" y1="6" x2="260" y2="6" stroke="#C9A84C" stroke-width="0.6" opacity="0.5"/>
+                </svg>
+            </div>
+
+            <!-- Invitation text -->
+            <p class="invite-text anim" data-delay="500">
+                Me shumë dashuri dhe gëzim ju ftojmë të ndani me ne një nga<br>
+                momentet më të bukura të jetës sonë – ditën e dasmës sonë.
+            </p>
+
+            <!-- Couple Photo -->
+            <div class="couple-photo-wrapper anim" data-delay="650">
+                <div class="couple-photo-frame">
+                    <img src="couple.png" alt="Urim & Malisa" class="couple-img">
+                </div>
+                <div class="photo-heart-badge">
+                    <svg viewBox="0 0 30 27" fill="url(#phg)" xmlns="http://www.w3.org/2000/svg" class="photo-heart-svg">
+                        <path d="M15 25 C5 17 0 12 0 7.5 C0 2.5 4 0 7.5 0 C11 0 14 2.5 15 5 C16 2.5 19 0 22.5 0 C26 0 30 2.5 30 7.5 C30 12 25 17 15 25Z"/>
+                        <defs>
+                            <linearGradient id="phg" x1="0" y1="0" x2="30" y2="27">
+                                <stop offset="0%" stop-color="#E8A0AB"/>
+                                <stop offset="100%" stop-color="#C9A84C"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Couple Names -->
+            <h1 class="couple-names anim" data-delay="800">Urim <span class="amp">&</span> Malisa</h1>
+
+            <!-- Details -->
+            <div class="details-section anim" data-delay="900">
+                <div class="detail-row">
+                    <span class="detail-icon">📅</span>
+                    <p class="detail-text"><strong>Data:</strong>&nbsp; 02 Gusht 2026</p>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-icon">🕐</span>
+                    <p class="detail-text"><strong>Ora :</strong>&nbsp; 19:00</p>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-icon">📍</span>
+                    <p class="detail-text"><strong>Vendi:</strong>&nbsp; Restorant "Dardania", Kërçovë</p>
+                </div>
+            </div>
+
+            <!-- Venue Photo -->
+            <div class="venue-photo-wrapper anim" data-delay="1100">
+                <div class="venue-photo-frame">
+                    <img src="venue.png" alt="Restorant Dardania" class="venue-img">
+                </div>
+            </div>
+
+            <!-- Closing message -->
+            <p class="closing-text anim" data-delay="1300">
+                <em>Prania juaj do ta bëjë këtë ditë edhe më të veçantë për ne.</em>
+            </p>
+
+            <!-- Bottom ornament -->
+            <div class="bottom-ornament anim" data-delay="1400">
+                <svg viewBox="0 0 200 30" class="ornament-svg">
+                    <path d="M30 15 Q55 0 80 15" stroke="#C9A84C" stroke-width="0.8" fill="none" opacity="0.5"/>
+                    <path d="M120 15 Q145 30 170 15" stroke="#C9A84C" stroke-width="0.8" fill="none" opacity="0.5"/>
+                    <circle cx="100" cy="15" r="2.5" fill="#C9A84C" opacity="0.4"/>
+                    <line x1="0" y1="15" x2="25" y2="15" stroke="#C9A84C" stroke-width="0.5" opacity="0.3"/>
+                    <line x1="175" y1="15" x2="200" y2="15" stroke="#C9A84C" stroke-width="0.5" opacity="0.3"/>
+                    <path d="M85 15 Q100 5 115 15" stroke="#C9A84C" stroke-width="0.6" fill="none" opacity="0.5"/>
+                    <path d="M85 15 Q100 25 115 15" stroke="#C9A84C" stroke-width="0.6" fill="none" opacity="0.5"/>
+                </svg>
+            </div>
+
+            <!-- Footer signature -->
+            <div class="footer-signature anim" data-delay="1500">
+                <p class="footer-love">Me dashuri,</p>
+                <p class="footer-names">Urim & Malisa</p>
+            </div>
+
+            <!-- Floral Bottom -->
+            <div class="floral-bottom">
+                <img src="floral-bottom.png" alt="" class="floral-bottom-img">
+            </div>
+        </div>
+
+        <!-- Share / WhatsApp Button -->
+        <div class="share-section anim" data-delay="1800" id="share-section">
+            <button class="whatsapp-btn" id="whatsapp-share" aria-label="Share on WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="wa-icon">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                <span>Shpërndaje në WhatsApp</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -270,7 +270,8 @@ document.addEventListener('DOMContentLoaded', () => {
             `✨ *Urim & Malisa* ✨\n\n` +
             `📅 Data: 02 Gusht 2026\n` +
             `🕐 Ora: 19:00\n` +
-            `📍 Vendi: Restorant "Dardania", Kërçovë\n\n` +
+            `📍 Vendi: Restorant "Dardania", Kërçovë\n` +
+            `🗺️ Harta: https://maps.google.com/?q=Restaurant+Dardania,Kercove\n\n` +
             `Prania juaj do ta bëjë këtë ditë edhe më të veçantë për ne.\n\n` +
             `Me dashuri,\nUrim & Malisa 💕`
         );
@@ -292,7 +293,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 `✨ *Urim & Malisa* ✨\n\n` +
                 `📅 Data: 02 Gusht 2026\n` +
                 `🕐 Ora: 19:00\n` +
-                `📍 Vendi: Restorant "Dardania", Kërçovë\n\n` +
+                `📍 Vendi: Restorant "Dardania", Kërçovë\n` +
+                `🗺️ Harta: https://maps.google.com/?q=Restaurant+Dardania,Kercove\n\n` +
                 `Prania juaj do ta bëjë këtë ditë edhe më të veçantë për ne.\n\n` +
                 `👉 Hap ftesën: ${pageUrl}\n\n` +
                 `Me dashuri,\nUrim & Malisa 💕`
